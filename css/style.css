@@ -1608,3 +1608,11 @@ a:focus {
     font-weight: 700;
 }
 
+.link-btn{
+    background-color: #1f6ec2;
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+
+}
+
