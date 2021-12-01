@@ -25,6 +25,58 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- email js  -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_PAcWLw2csDcfZPZjY0X3Q");
+        })();
+    </script>
+
+   <!--  <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_fg97yqv', 'template_8hyc7bu', this)
+                    .then(function () {
+                        console.log('SUCCESS!');
+                        alert('Your Mail Has Been Sent ');
+                        // window.location.reload();
+                        document.getElementById("contact-form").reset();
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                        alert('Emali send Failed', error)
+                        document.getElementById("contact-form").reset();
+                    });
+            });
+        }
+    </script> -->
+
+
+    <script>
+        function sendMail(params) {
+    var tempParams = {
+        from_name:document.getElementById("fromName").value,
+        to_name: document.getElementById("toName").value,
+        message: document.getElementById("msg").value
+
+    };
+
+    emailjs.send('service_fg97yqv', 'template_8hyc7bu',tempParams)
+    .then(function(res){
+        console.log('success', res.status);
+    } )
+
+
+        }
+    </script>
+
+
+
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -40,7 +92,6 @@
                 <div class="navbar-nav ml-auto">
                     <a href="#home" class="nav-item nav-link active">Home</a>
                     <a href="#about" class="nav-item nav-link">About</a>
-                    <a href="#skills" class="nav-item nav-link">Skills</a>
                     <a href="#projects" class="nav-item nav-link">projects</a>
                     <a href="#contact" class="nav-item nav-link">Contact</a>
                 </div>
@@ -64,7 +115,9 @@
                                 Full Stack Developer</div>
                         </div>
                         <div class="hero-btn">
-                            <a class="btn" href="https://drive.google.com/uc?export=download&id=1CMjygEFdSVAR_dhT95aon9PFjX9sEp7X">Get Resume</a>
+                            <a class="btn"
+                                href="https://drive.google.com/uc?export=download&id=1CMjygEFdSVAR_dhT95aon9PFjX9sEp7X">Get
+                                Resume</a>
                             <a class="btn" href="#contact">Contact Me</a>
                         </div>
                     </div>
@@ -83,7 +136,7 @@
     <!-- Hero End -->
 
 
-    <!-- About Start -->
+    <!--=================== About Start ================== -->
     <div class="about wow fadeInUp mt-5" data-wow-delay="0.1s" id="about">
         <div class="container-fluid">
             <div class="row align-items-center">
@@ -104,7 +157,11 @@
                         </div>
                         <div class="about-text">
                             <p>
-                                Hi, I am Khayrul Alam Rayhan. I am a Front-Stack web developer who always looks for challenges where I can use my potential. <br> I have experience working with React JS, Express JS, Mongo DB, Express JS, and CSS frameworks like Bootstrap, Tailwind, Material UI. <br> I am always ready to take new challenges and love to work with new technologies.
+                                Hi, I am Khayrul Alam Rayhan. I am a Front-Stack web developer who always looks for
+                                challenges where I can use my potential. <br> I have experience working with React JS,
+                                Express JS, Mongo DB, Express JS, and CSS frameworks like Bootstrap, Tailwind, Material
+                                UI. <br> I am always ready to take new challenges and love to work with new
+                                technologies.
                             </p>
                         </div>
                         <a class="btn" href="https://www.linkedin.com/in/khayrul-alam-8a69981a2/" target="_blank"> <span
@@ -116,7 +173,7 @@
             </div>
         </div>
     </div>
-    <!-- About End -->
+    <!-- ================ About End ============================= -->
 
 
     <!-- Skills Start -->
@@ -138,7 +195,8 @@
 
 
 
-    <!-- Projects Start -->
+    <!-- ===================== Projects Start ==========================-->
+
     <div class="blog" id="projects">
         <div class="container">
             <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
@@ -151,26 +209,27 @@
                         <div class="blog-img">
                             <img src="images/medicare.png" alt="Blog">
                         </div>
-                        <!-- 1 -->
+                        <!-- ===== 1 ===== -->
                         <div class="blog-text">
                             <h2>MediCare</h2>
                             <p>
-                              <b> Technologies: React, React Router, Bootstrap, Google Firebase. </b>  
+                                <b> Technologies: React, React Router, Bootstrap, Google Firebase. </b>
                                 <li>This is a Frond-End healthcare related website.</li>
                                 <li>This website has an authentication system (Google Sign In).</li>
                                 <li>It is mainly focused on a Hospital website's user interface</li>
                                 <br>
-                                <a href="https://hospital-auth-6d139.web.app/"target="_blank"> Live Site </a> 
+                                <a href="https://hospital-auth-6d139.web.app/" target="_blank"> Live Site </a>
 
-                                <a class="m-4" href="https://github.com/Rockrayhan/HealthCare-client"target="_blank"> Code Link </a> 
-                                
+                                <a class="m-4" href="https://github.com/Rockrayhan/HealthCare-client" target="_blank">
+                                    Code Link </a>
+
                             </p>
-                            <a class="btn" href="">Details <i class="fa fa-angle-right"></i></a>
+                            <a class="btn" href="./medicare-details.html">Details <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
 
-                <!-- 2 -->
+                <!--====== 2 =======-->
                 <div class="col-lg-6">
                     <div class="blog-item wow fadeInUp" data-wow-delay="0.3s">
                         <div class="blog-img">
@@ -179,22 +238,23 @@
                         <div class="blog-text">
                             <h2>E - Learning</h2>
                             <p>
-                              <b> Technologies: React, React Router, Bootstrap. </b>  
+                                <b> Technologies: React, React Router, Bootstrap. </b>
                                 <li>This website is built with React Router.</li>
                                 <li>Based on a simple Educational services website's UI.</li>
                                 <li>User can navigate one page to another without reloading the page.</li>
                                 <br>
-                                <a href="https://e-learning-420.netlify.app/"target="_blank"> Live Site </a> 
+                                <a href="https://e-learning-420.netlify.app/" target="_blank"> Live Site </a>
 
-                                <a class="m-4" href="https://github.com/Rockrayhan/E-Learning-Client"target="_blank"> Code Link </a> 
-                                
+                                <a class="m-4" href="https://github.com/Rockrayhan/E-Learning-Client" target="_blank">
+                                    Code Link </a>
+
                             </p>
                             <a class="btn" href="">Details <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-            <!--  3-->
+            <!-- ======= 3======-->
             <div class="row">
                 <div class="col-lg-6">
                     <div class="blog-item wow fadeInUp" data-wow-delay="0.1s">
@@ -204,20 +264,22 @@
                         <div class="blog-text">
                             <h2>The Game Changer</h2>
                             <p>
-                              <b> Technologies: React, Bootstrap </b>  
+                                <b> Technologies: React, Bootstrap </b>
                                 <li>Used React, the User can add products to Cart.</li>
-                                
-                                <br>
-                                <a href="https://the-game-changer.netlify.app/"target="_blank"> Live Site </a> 
 
-                                <a class="m-4" href="https://github.com/Rockrayhan/The-Game-Changer"target="_blank"> Code Link </a> 
-                                
+                                <br>
+                                <a href="https://the-game-changer.netlify.app/" target="_blank"> Live Site </a>
+
+                                <a class="m-4" href="https://github.com/Rockrayhan/The-Game-Changer" target="_blank">
+                                    Code Link </a>
+
                             </p>
                             <a class="btn" href="">Details <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
-                    <!-- 4 -->
+
                 </div>
+                <!--====== 4 ======-->
                 <div class="col-lg-6">
                     <div class="blog-item wow fadeInUp" data-wow-delay="0.3s">
                         <div class="blog-img">
@@ -225,96 +287,157 @@
                         </div>
                         <div class="blog-text">
                             <p>
-                                <b> Technologies: React, MongoDB, Express, NodeJS, Bootstrap, Material UI, Google Firebase. </b>  
-                                  <li>A niche website with firebase authentication (Email, Password / Register).</li>
-                                  <li>user can make orders, delete orders, can give reviews.</li>
-                                  <li>In the Dashboard admin can add/delete products, can make any user into admin.</li>
-                                  <br>
-                                  <a href="https://cycle-world-e2aec.web.app/"target="_blank"> Live Site </a> 
-  
-                                  <a class="m-4" href="https://github.com/Rockrayhan/cycle-world"target="_blank"> Code Link </a> 
-                                  
-                              </p>
-                              <a class="btn" href="">Details <i class="fa fa-angle-right"></i></a>
-                            
+                                <b> Technologies: React, MongoDB, Express, NodeJS, Bootstrap, Material UI, Google
+                                    Firebase. </b>
+                                <li>A niche website with firebase authentication (Email, Password / Register).</li>
+                                <li>user can make orders, delete orders, can give reviews.</li>
+                                <li>In the Dashboard admin can add/delete products, can make any user into admin.</li>
+                                <br>
+                                <a href="https://cycle-world-e2aec.web.app/" target="_blank"> Live Site </a>
+
+                                <a class="m-4" href="https://github.com/Rockrayhan/cycle-world" target="_blank"> Code
+                                    Link </a>
+
+                            </p>
+                            <a class="btn" href="">Details <i class="fa fa-angle-right"></i></a>
+
                         </div>
                     </div>
                 </div>
             </div>
-            
+
+        </div>
+        <!-- ================== Projects End =================-->
+
+
+
+        <!--============= Contact  ===========-->
+        
+       <!--  <div class="container">
+
+            <h1 class="" id="contact">Contact now</h1> -->
+
+
+        <!-- <script type="text/javascript" src="https://form.jotform.com/jsform/213323786554460"></script>   -->
+        <!-- (jotform) -->
+
+
+           <!-- <form id="contact-form">
+                <input type="hidden" name="contact_number">
+                <label>Name</label>
+                <input type="text" name="user_name">
+                <label>Email</label>
+                <input type="email" name="user_email">
+                <label>Message</label>
+                <textarea name="message"></textarea>
+                <input type="submit" value="Send">
+            </form>
+
+        </div> -->
+
+        <div class="container" id="contact">
+
+<div class="row">
+    <div class="col align-self-center">
+    <h1 class="text-center">Contact us</h1>
+    <!-- contact form -->
+    <form id="myForm">
+        <!-- Client name -->
+        <div class="form-group">
+        <label for="name">Your Name</label>
+        <input
+            type="text"
+            class="form-control"
+            id="toName" 
+            placeholder="enter Your name"
+        />
+        </div>
+        <!-- Client Email  -->
+        <div class="form-group">
+        <label for="name">Your Email</label>
+        <input
+            type="email"
+            class="form-control"
+            id="fromName" 
+            placeholder="enter Your Email"
+        />
+        </div>
+
+        
+
+        <div class="form-group">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="msg" name="message" rows="5"></textarea>
+        </div>
+
+        <button onclick='sendMail()' class="btn btn-primary">Send Email</button>
+    </form>
     </div>
-    <!-- Projects End -->
+</div>
+</div>
 
 
 
-    <!-- Contact -->
-
-    <div class="container">
-
-        <h1 class="" id="contact">Contact now</h1>
-
-        <script type="text/javascript" src="https://form.jotform.com/jsform/213323786554460"></script>
-
-    </div>
+        
 
 
 
 
-    <!-- Footer Start -->
-    <div class="footer wow fadeIn" data-wow-delay="0.3s">
-        <div class="container-fluid">
-            <div class="container">
-                <div class="footer-info">
-                    <h2>Khayrul Alam Rayhan</h2>
-                    <h3>Mirpur,Dhaka,Bangladesh</h3>
-                    <div class="footer-menu">
-                        <p>+880 168 2011307</p>
-                        <p>Khayrulalamdict@gmail.com</p>
-                    </div>
-                    <div class="footer-social">
-                        <a href=""><i class="fab fa-twitter "></i></a>
-                        <a href=""><i class="fab fa-facebook-f"></i></a>
-                        <a href=""><i class="fab fa-youtube"></i></a>
-                        <a href=""><i class="fab fa-instagram "></i></a>
-                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+        <!-- Footer Start -->
+        <div class="footer wow fadeIn" data-wow-delay="0.3s">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="footer-info">
+                        <h2>Khayrul Alam Rayhan</h2>
+                        <h3>Mirpur,Dhaka,Bangladesh</h3>
+                        <div class="footer-menu">
+                            <p>+880 168 2011307</p>
+                            <p>Khayrulalamdict@gmail.com</p>
+                        </div>
+                        <div class="footer-social">
+                            <a href=""><i class="fab fa-twitter "></i></a>
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-youtube"></i></a>
+                            <a href=""><i class="fab fa-instagram "></i></a>
+                            <a href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="container copyright">
-                <p>&copy;  All Right Reserved | Khayrul ALam </p>
+                <div class="container copyright">
+                    <p>&copy; All Right Reserved | Khayrul ALam </p>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Footer End -->
+        <!-- Footer End -->
 
 
-    <!-- Back to top button -->
-    <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
+        <!-- Back to top button -->
+        <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
 
 
-    <!-- Pre Loader -->
-    <div id="loader" class="show">
-        <div class="loader"></div>
-    </div>
+        <!-- Pre Loader -->
+        <div id="loader" class="show">
+            <div class="loader"></div>
+        </div>
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/typed/typed.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/typed/typed.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
 
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
 </body>
 
 </html>

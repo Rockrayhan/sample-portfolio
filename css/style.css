@@ -170,7 +170,7 @@ a:focus {
 
 @media (min-width: 992px) {
     .navbar {
-        position: absolute;
+        /* position: absolute; */
         width: 100%;
         padding: 30px 60px;
         background: transparent !important;
@@ -1594,3 +1594,17 @@ a:focus {
         padding: 0 5px;
     }
 }
+
+
+/* =========== latest CSS =========== */
+
+.project-details{
+    color: black;
+    margin-top: 200px;
+}
+
+.project-details-header {
+    color: rgb(12, 12, 12);
+    font-weight: 700;
+}
+
