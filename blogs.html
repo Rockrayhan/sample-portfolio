@@ -1,13 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogs</title>
 </head>
+
+<style>
+    .article-header{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+</style>
+
+
 <body>
-    <h1>Blogs are coming soon.....</h1>
-    
+
+
+
+    <!--=========== CSS specificity =========== -->
+    <section>
+
+
+        <article>
+            <h1 class="article-header">CSS Specificity</h1>
+
+            <p>
+                CSS Specificity is one of the most common and important topics of CSS. Also a very confusing topic and a
+                confusing word. People often get confused about this concept, especially beginners. Before we talk about
+                SpecificityIt is important we know what cascading is in the cascading style sheet. So, cascading
+                actually means your style is being passed down from top to bottom. Also, one thing to know is that since
+                our styleSheet is being read from top to bottom if we have two identical styles being applied to the
+                same element, the last one gets applied by the browser.
+            </p>
+            <p>
+                There is some math involved with specificity and certain types of selectors have certain value points
+                attached to them and whatever selector has the most value wins and gets applied. When you have
+                conflicting styles that are styling the same element or elements CSS actually assigns a numeric
+                specificity value. It calculates a number to see which one wins. The winner element is more specific
+                than others.
+
+            </p>
+            <p>
+                One of the most annoying things in web development is when you write some CSS styles sometimes they just
+                don’t work. When you check them in the dev tool you will find that the styles you have made are crossed.
+                It happens because of CSS specificity.
+            </p>
+            <p>
+                When you use more than one CSS style set in an element, the browser will allow only one. The rule that
+                browsers follow to use CSS style set in orderly is called CSS specificity. CSS specificity always works
+                priority-wise. Here is the priority order:
+                Inline (2) Id (3) Class (4) Internal CSS (5) External CSS (6) tag
+
+                Inline: Styling your element using inline CSS is the most powerful and higher ranked in CSS specificity
+
+                ID: Id selectors are very very specific but less ranked than the inline style.
+
+                Class: They are pretty specific but not as specific as ID because you use each id is unique and each id
+                is used for each element on the other hand one class can be used in many elements. So the class has
+                fewer scores than ID.
+
+                Internal CSS: You can use inline CSS on the same page you are coding or developing your site. In the
+                head tag you have to give another tag. In the style tag you can do all your styles. But that style will
+                only be used for that particular page. So it became more particular than external CSS.
+
+                External CSS: Inline CSS can be used on only one page that you are coding. But you can use external CSS
+                in as many pages as you want so that’s why external CSS is less specific than internal CSS.
+
+                Tag: You can style your tags by calling them in the Internal or external style sheet. That’s why they
+                are at the last ranked in the CSS specificity.
+            </p>
+        </article>
+
+    </section>
+
+
+
+    <section>
+
+
+        <!--========== Javascript string section ======== -->
+
+        <article>
+            <h1 class="article-header">JavaScript String</h1>
+
+            <ol>
+                <li>
+                    <p>
+                        <b>charAt:</b> CharAt() returns the character at the specific position. When you want to know a
+                        character’s index position you can use charAt(). <br> Example: let text = "HELLO WORLD"; <br>
+                        let letter = text.charAt(1); The Result will be E.
+                    </p>
+
+                </li>
+            </ol>
+            <ol>
+                <li>
+                    <p>
+                        <b>Concat:</b> When you want to join two or more strings into a new variable you can use
+                        concat()
+                        method. <br>
+                        Example: let word1 = “Hello” ; <br> let word2 = “world” : <br> let result = word1.concat( “ ”,
+                        word2 ) ;
+                        Result will be Hello World.
+                    </p>
+
+                </li>
+            </ol>
+            <ol>
+                <li>
+                    <p>
+                        <b> Includes:</b> The includes() method is used when you want to check if a string contains a
+                        specified string. If it finds the string, the result will be true otherwise it will return
+                        false. Also, the include() method is case-sensitive. <br> Example: let word = “Hello World” <br>
+                        let result = “ text.includes(“World”); Result will <b> true.</b>
+                    </p>
+
+                </li>
+            </ol>
+        </article>
+
+    </section>
+
+
+
+
+
+
 </body>
+
 </html>

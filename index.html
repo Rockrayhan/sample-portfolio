@@ -34,7 +34,7 @@
         })();
     </script>
 
-   <!--  <script type="text/javascript">
+    <!--  <script type="text/javascript">
         window.onload = function () {
             document.getElementById('contact-form').addEventListener('submit', function (event) {
                 event.preventDefault();
@@ -59,17 +59,17 @@
 
     <script>
         function sendMail(params) {
-    var tempParams = {
-        from_name:document.getElementById("fromName").value,
-        to_name: document.getElementById("toName").value,
-        message: document.getElementById("msg").value
+            var tempParams = {
+                from_name: document.getElementById("fromName").value,
+                to_name: document.getElementById("toName").value,
+                message: document.getElementById("msg").value
 
-    };
+            };
 
-    emailjs.send('service_fg97yqv', 'template_8hyc7bu',tempParams)
-    .then(function(res){
-        console.log('success', res.status);
-    } )
+            emailjs.send('service_fg97yqv', 'template_8hyc7bu', tempParams)
+                .then(function (res) {
+                    console.log('success', res.status);
+                })
 
 
         }
@@ -90,11 +90,11 @@
 
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav ml-auto">
-                    <a href="#home" class="nav-item nav-link active">Home</a>
+                    <a href="#home" class="nav-item nav-link ">Home</a>
                     <a href="#about" class="nav-item nav-link">About</a>
                     <a href="#projects" class="nav-item nav-link">projects</a>
                     <a href="#contact" class="nav-item nav-link">Contact</a>
-                    <a href="./blogs.html"target="_blank" class="nav-item nav-link">Blogs</a>
+                    <a href="./blogs.html" target="_blank" class="nav-item nav-link">Blogs</a>
                 </div>
             </div>
         </div>
@@ -117,7 +117,7 @@
                         </div>
                         <div class="hero-btn">
                             <a class="btn"
-                                href="https://drive.google.com/uc?export=download&id=1CMjygEFdSVAR_dhT95aon9PFjX9sEp7X">Get
+                                href="https://drive.google.com/uc?export=download&id=1b7HfTn8pMiWnDaseAxpTzbBe5NEzcqgi">Get
                                 Resume</a>
                             <a class="btn" href="#contact">Contact Me</a>
                         </div>
@@ -158,7 +158,7 @@
                         </div>
                         <div class="about-text">
                             <p>
-                                Hi, I am Khayrul Alam Rayhan. I am a Front-Stack web developer who always looks for
+                                Hi, I am Khayrul Alam Rayhan. I am a Front-End web developer who always looks for
                                 challenges where I can use my potential. <br> I have experience working with React JS,
                                 Express JS, Mongo DB, Express JS, and CSS frameworks like Bootstrap, Tailwind, Material
                                 UI. <br> I am always ready to take new challenges and love to work with new
@@ -205,36 +205,45 @@
                 <h2>Latest Projects</h2>
             </div>
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="blog-item wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="blog-img">
-                            <img height="513px" src="images/medicare.png" alt="Blog">
-                        </div>
-                        <!-- ===== 1 Medicare ===== -->
-                        <div class="blog-text">
-                            <h2>MediCare</h2>
-                            <p>
-                                <b> Technologies: React, React Router, Bootstrap, Google Firebase. </b>
-                                <li>This is a Frond-End healthcare related website.</li>
-                                <li>This website has an authentication system (Google Sign In).</li>
-                                <li>It is mainly focused on a Hospital website's user interface</li>
-                                <br>
-                                <a class="link-btn" href="https://hospital-auth-6d139.web.app/" target="_blank"> <i class="fas fa-satellite-dish"></i> Live Site </a>
 
-                                <a class="m-4 link-btn" href="https://github.com/Rockrayhan/HealthCare-client" target="_blank">
-                                    <i class="fab fa-github-square "></i>  Code Link </a>
+
+                <!--====== 1 IT-Essentials ======-->
+                <div class="col-lg-6">
+                    <div class="blog-item wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="blog-img">
+                            <img src="images/IT-Essentials.PNG" alt="Blog">
+                        </div>
+                        <div class="blog-text">
+                            <h2>IT-Essentials</h2>
+                            <p>
+                                <b> Technologies: React, MongoDB, Express, NodeJS, Bootstrap, Material UI, Google
+                                    Firebase. </b>
+                                <li>A niche website with firebase authentication (Email, Password / Register).</li>
+                                <li>user can make orders, delete orders, can give reviews.</li>
+                                <li>In the Dashboard admin can add/delete products, can make any user into admin.</li>
+                                <br>
+                                <a class="link-btn" href="https://it-essentials-47054.web.app/" target="_blank"> <i class="fas fa-satellite-dish"></i> Live
+                                    Site </a>
+
+                                <a class="m-4 link-btn" href="https://github.com/Rockrayhan/it-essential-client" target="_blank"> <i class="fab fa-github-square "></i>
+                                   Client Code </a>
+                                <a class="m-4 link-btn" href="https://github.com/Rockrayhan/it-essential-server" target="_blank"> <i class="fab fa-github-square "></i>
+                                    
+                                     Server Code</a>
 
                             </p>
-                            <a class="btn link-btn" href="./medicare-details.html">Details <i class="fa fa-angle-right"></i></a>
+                            <a class="btn" href="./it-essentials.html">Details <i class="fa fa-angle-right"></i></a>
+
                         </div>
                     </div>
                 </div>
+
 
                 <!--====== 2  E-learning =======-->
                 <div class="col-lg-6">
                     <div class="blog-item wow fadeInUp" data-wow-delay="0.3s">
                         <div class="blog-img">
-                            <img src="images/e- learning.png" alt="Blog">
+                            <img src="images/E-learning-cover.PNG" alt="Blog">
                         </div>
                         <div class="blog-text">
                             <h2>E - Learning</h2>
@@ -244,13 +253,16 @@
                                 <li>Based on a simple Educational services website's UI.</li>
                                 <li>User can navigate one page to another without reloading the page.</li>
                                 <br>
-                                <a class="link-btn" href="https://e-learning-420.netlify.app/" target="_blank"> <i class="fas fa-satellite-dish"></i> Live Site </a>
+                                <a class="link-btn" href="https://e-learning-420.netlify.app/" target="_blank"> <i
+                                        class="fas fa-satellite-dish"></i> Live Site </a>
 
-                                <a class="m-4 link-btn" href="https://github.com/Rockrayhan/E-Learning-Client" target="_blank">
-                                    <i class="fab fa-github-square "></i>   Code Link </a>
+                                <a class="m-4 link-btn" href="https://github.com/Rockrayhan/E-Learning-Client"
+                                    target="_blank">
+                                    <i class="fab fa-github-square "></i> Code Link </a>
 
                             </p>
-                            <a class="btn" href="./e-learning-details.html">Details <i class="fa fa-angle-right"></i></a>
+                            <a class="btn" href="./e-learning-details.html">Details <i
+                                    class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -260,7 +272,7 @@
                 <div class="col-lg-6">
                     <div class="blog-item wow fadeInUp" data-wow-delay="0.1s">
                         <div class="blog-img">
-                            <img height="670px" src="images/The game changer.png" alt="Blog">
+                            <img height="670px" src="images/TheGameChaner-1.png" alt="Blog">
                         </div>
                         <div class="blog-text">
                             <h2>The Game Changer</h2>
@@ -269,43 +281,53 @@
                                 <li>Used React, the User can add products to Cart.</li>
 
                                 <br>
-                                <a class="link-btn" href="https://the-game-changer.netlify.app/" target="_blank"> <i class="fas fa-satellite-dish"></i> Live Site </a>
+                                <a class="link-btn" href="https://the-game-changer.netlify.app/" target="_blank"> <i
+                                        class="fas fa-satellite-dish"></i> Live Site </a>
 
-                                <a class="m-4 link-btn" href="https://github.com/Rockrayhan/The-Game-Changer" target="_blank">
-                                    <i class="fab fa-github-square "></i>   Code Link </a>
+                                <a class="m-4 link-btn" href="https://github.com/Rockrayhan/The-Game-Changer"
+                                    target="_blank">
+                                    <i class="fab fa-github-square "></i> Code Link </a>
 
                             </p>
-                            <a class="btn" href="./theGameChanger-details.html">Details <i class="fa fa-angle-right"></i></a>
+                            <a class="btn" href="./theGameChanger-details.html">Details <i
+                                    class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
 
                 </div>
-                <!--====== 4 ======-->
+
+                <!-- ===== 4 Medicare ===== -->
                 <div class="col-lg-6">
-                    <div class="blog-item wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="blog-item wow fadeInUp" data-wow-delay="0.1s">
                         <div class="blog-img">
-                            <img src="images/cycle-world.png" alt="Blog">
+                            <img height="513px" src="images/medicare-cover.PNG" alt="Blog">
                         </div>
-                        <div class="blog-text">
-                            <p>
-                                <b> Technologies: React, MongoDB, Express, NodeJS, Bootstrap, Material UI, Google
-                                    Firebase. </b>
-                                <li>A niche website with firebase authentication (Email, Password / Register).</li>
-                                <li>user can make orders, delete orders, can give reviews.</li>
-                                <li>In the Dashboard admin can add/delete products, can make any user into admin.</li>
-                                <br>
-                                <a class="link-btn" href="https://cycle-world-e2aec.web.app/" target="_blank"> <i class="fas fa-satellite-dish"></i> Live Site </a>
 
-                                <a class="m-4 link-btn" href="https://github.com/Rockrayhan/cycle-world" target="_blank"> <i class="fab fa-github-square "></i> Code
-                                    Link </a>
+                        <div class="blog-text">
+                            <h2>MediCare</h2>
+                            <p>
+                                <b> Technologies: React, React Router, Bootstrap, Google Firebase. </b>
+                                <li>This is a Frond-End healthcare related website.</li>
+                                <li>This website has an authentication system (Google Sign In).</li>
+                                <li>It is mainly focused on a Hospital website's user interface</li>
+                                <br>
+                                <a class="link-btn" href="https://hospital-auth-6d139.web.app/" target="_blank"> <i
+                                        class="fas fa-satellite-dish"></i> Live Site </a>
+
+                                <a class="m-4 link-btn" href="https://github.com/Rockrayhan/HealthCare-client"
+                                    target="_blank">
+                                    <i class="fab fa-github-square "></i> Code Link </a>
 
                             </p>
-                            <a class="btn" href="./cycle-world.html">Details <i class="fa fa-angle-right"></i></a>
-
+                            <a class="btn" href="./medicare-details.html">Details <i
+                                    class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
+
             </div>
+
+
 
         </div>
         <!-- ================== Projects End =================-->
@@ -313,8 +335,8 @@
 
 
         <!--============= Contact  ===========-->
-        
-       <!--  <div class="container">
+
+        <!--  <div class="container">
 
             <h1 class="" id="contact">Contact now</h1> -->
 
@@ -323,7 +345,7 @@
         <!-- (jotform) -->
 
 
-           <!-- <form id="contact-form">
+        <!-- <form id="contact-form">
                 <input type="hidden" name="contact_number">
                 <label>Name</label>
                 <input type="text" name="user_name">
@@ -338,51 +360,41 @@
 
         <div class="container" id="contact">
 
-<div class="row">
-    <div class="col align-self-center">
-        <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-            <p>Have any query or want to work Together ?</p>
-            <h2>Contact Me</h2>
-        </div>
-    <!-- contact form -->
-    <form id="myForm">
-        <!-- Client name -->
-        <div class="form-group">
-        <label for="name">Your Name</label>
-        <input
-            type="text"
-            class="form-control"
-            id="toName" 
-            placeholder="enter Your name"
-        />
-        </div>
-        <!-- Client Email  -->
-        <div class="form-group">
-        <label for="name">Your Email</label>
-        <input
-            type="email"
-            class="form-control"
-            id="fromName" 
-            placeholder="enter Your Email"
-        />
-        </div>
+            <div class="row">
+                <div class="col align-self-center">
+                    <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                        <p>Have any query or want to work Together ?</p>
+                        <h2>Contact Me</h2>
+                    </div>
+                    <!-- contact form -->
+                    <form id="myForm">
+                        <!-- Client name -->
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" class="form-control" id="toName" placeholder="enter Your name" />
+                        </div>
+                        <!-- Client Email  -->
+                        <div class="form-group">
+                            <label for="name">Your Email</label>
+                            <input type="email" class="form-control" id="fromName" placeholder="enter Your Email" />
+                        </div>
 
-        
 
-        <div class="form-group">
-        <label for="message">Message</label>
-        <textarea class="form-control" id="msg" name="message" rows="5"></textarea>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="msg" name="message" rows="5"></textarea>
+                        </div>
+
+                        <button onclick='sendMail()' class="btn btn-primary">Send Email</button>
+                    </form>
+                </div>
+            </div>
         </div>
 
-        <button onclick='sendMail()' class="btn btn-primary">Send Email</button>
-    </form>
-    </div>
-</div>
-</div>
 
 
 
-        
 
 
 
